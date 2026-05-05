@@ -3,15 +3,18 @@
 
 #include <cstdint>
 #include "memory.h"
+#include "cpu.h"
 #include "registers.h"
 
 class Instructions {
   public:
     Instructions(Registers* registers, Memory* memory);
-    void Execute(uint8_t opcode, unsigned char operand);
+    ~Instructions();  
+    void Execute(uint8_t opcode, uint16_t operand);
   private:
     Registers *registers;
     Memory* memory;
+    Cpu* cpu;
 };
 
 #endif
