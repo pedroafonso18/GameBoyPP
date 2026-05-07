@@ -235,7 +235,7 @@ bool CheckCondition(Registers* registers, uint8_t opcode)
     case 0xCC:
     case 0xC8:
       return registers->IsFlagSet(FLAGS_ZERO);
-    case 0x30://
+    case 0x30:
     case 0xD2:
     case 0xD4:
     case 0xD0:
