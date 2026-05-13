@@ -14,6 +14,9 @@ class ColorPalettes {
     ColorPalette GetBWPalette();
     ColorPalette GetOBP0Palette();
     ColorPalette GetOBP1Palette();
+
+  private:
+    void onMmuWrite();
 };
 
 #endif

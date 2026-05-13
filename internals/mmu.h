@@ -19,7 +19,7 @@ class MMU {
   public:
     MMU(Cartridge& cartridge);
 
-    uint8_t Read(uint16_t address);
+    uint8_t Read(uint16_t address, bool ppuAccess = false) const;
     void Write(uint16_t address, uint8_t value);
     void RawWrite(uint16_t address, uint8_t value);
     void ExecuteDMATransfer(uint8_t value);
